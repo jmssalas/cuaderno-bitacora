@@ -37,6 +37,17 @@ function includeHTML() {
 }
 </script> 
 
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -53,11 +64,28 @@ and is wrapped around the whole page content, except for the footer in this exam
   <!-- <p>Welcome to the blog of <span class="w3-tag">unknown</span></p> -->
 </header>
 
+<!-- Top Navigation Menu -->
+<!-- <div class="topnav">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <div id="myLinks" style="display: "block"">
+    <a href="#home">Logo</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+-->
+
 <!-- Grid -->
 <div class="w3-row">
 
 <!-- Blog entries -->
 <div class="w3-col"> 
+
+  <div w3-include-html="2019/01/20190109_carla.html"></div> 
+  <hr>
 
   <div w3-include-html="2019/01/20190109_dinero.html"></div> 
   <hr>
@@ -69,9 +97,6 @@ and is wrapped around the whole page content, except for the footer in this exam
   <hr>
 
   <div w3-include-html="2019/01/20190106_paciencia.html"></div> 
-  <hr>
-
-  <div w3-include-html="2019/01/20190101_sol.html"></div> 
   <hr>
 
   <script> includeHTML(); </script>
@@ -87,9 +112,6 @@ and is wrapped around the whole page content, except for the footer in this exam
   
 
 <!-- END BLOG ENTRIES -->
-</div>
-  
-<!-- END Introduction Menu -->
 </div>
 
 <!-- END GRID -->
