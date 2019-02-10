@@ -37,17 +37,6 @@ function includeHTML() {
 }
 </script> 
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-</script>
-
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -70,6 +59,9 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Blog entries -->
 <div class="w3-col"> 
 
+  <div w3-include-html="2019/02/20190210_anoranza.html"></div> 
+  <hr>
+
   <div w3-include-html="2019/02/20190207_carmen.html"></div> 
   <hr>
 
@@ -80,9 +72,6 @@ and is wrapped around the whole page content, except for the footer in this exam
   <hr>
 
   <div w3-include-html="2019/02/20190203_encerrarme.html"></div> 
-  <hr>
-
-  <div w3-include-html="2019/02/20190202_click.html"></div> 
   <hr>
 
   <script> includeHTML(); </script>
