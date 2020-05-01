@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<title>CUADERNO DE BITACORA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script> 
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>CUADERNO DE BITÁCORA</b></h1>
+  <p>Interrail República Checa - Agosto del 2019</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col">
+
+  <div w3-include-html="20190815.html"></div> 
+  <hr>   
+
+  <div w3-include-html="20190816.html"></div> 
+  <hr> 
+  
+  <div w3-include-html="20190817.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190818.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190819.html"></div> 
+  <hr>   
+
+  <div w3-include-html="20190820.html"></div> 
+  <hr> 
+  
+  <div w3-include-html="20190821.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190822.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190823.html"></div> 
+  <hr>   
+
+  <div w3-include-html="20190824.html"></div> 
+  <hr> 
+  
+  <div w3-include-html="20190825.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190826.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190827.html"></div> 
+  <hr>   
+
+  <div w3-include-html="20190828.html"></div> 
+  <hr> 
+  
+  <div w3-include-html="20190829.html"></div> 
+  <hr>
+  
+  <div w3-include-html="20190830.html"></div> 
+  <hr>
+  
+  <script> includeHTML(); </script>
+
+<!-- END BLOG ENTRIES -->
+</div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+    Contact me on:
+    <a href="mailto:josemaria.sanchezsalas@gmail.com"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/JoseMSSalas"><i class="fab fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/jmssalas/"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://github.com/jmssalas"><i class="fab fa-github w3-hover-opacity"></i></a>
+    <a href="https://telegram.me/jmssalas"><i class="fab fa-telegram w3-hover-opacity"></i></a>
+</footer>
+
+</body>
+</html>
